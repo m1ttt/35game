@@ -34,6 +34,7 @@ public class JuanchoMov : MonoBehaviour
 
         
         Animator.SetBool("corriendo", Horizontal != 0.0f);
+     
 
         if (Physics2D.Raycast(transform.position, Vector3.down, 0.2f))
         {
