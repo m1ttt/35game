@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Scenes : MonoBehaviour
 {
-    int dim = 0;
+   public int escena = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,10 +15,10 @@ public class Scenes : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        if (Input.GetKeyDown(KeyCode.B))
+
+        if (Input.GetKeyDown(KeyCode.B) && escena != 3) ;
         {
-            
+            escena = 3;
             tprojo();
             
         }

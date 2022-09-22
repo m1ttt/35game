@@ -11,6 +11,8 @@ public class JuanchoMov : MonoBehaviour
     private float Horizontal;
     private Animator Animator;
     private bool Grounded;
+    private bool Vertical;
+
 
     // Start is called before the first frame update
     void Start()
@@ -25,27 +27,41 @@ public class JuanchoMov : MonoBehaviour
     void Update()
     { 
         Horizontal = Input.GetAxisRaw("Horizontal");
+     
         
         if (Horizontal < 0.0f) transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
         else if (Horizontal > 0.0f) transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
 
+        
         Animator.SetBool("corriendo", Horizontal != 0.0f);
-      
+
         if (Physics2D.Raycast(transform.position, Vector3.down, 0.2f))
         {
             Grounded = true;
+
         }
-        else Grounded = false;
+        else
+        {
+            Grounded = false;
+
+        }
+
 
         // Salto
         if (Input.GetKeyDown(KeyCode.W)&&Grounded)
         {
+            Animator.SetBool("enSuelo", true);
             Jump();
+        }
+        else if(Grounded==false)
+        {
+            Animator.SetBool("enSuelo", true);
         }
     }
     private void Jump()
     {
         Rigidbody2D.AddForce(Vector2.up*Jump_Force);
+        
     }
 
     private void FixedUpdate()
