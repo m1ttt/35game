@@ -50,6 +50,6 @@ public class TPEscenas : MonoBehaviour
     }
     private void tpmorado()
     {
-        SceneManager.LoadScene("Morado");        
+        SceneManager.LoadScene("Morado");
     }
 }
