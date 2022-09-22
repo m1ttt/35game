@@ -24,7 +24,7 @@ public class TPEscenas : MonoBehaviour
             tprojo(); 
 
         }
-        else if (Input.GetKeyDown(KeyCode.N) && nombreEscena != "SampleScene") {
+        else if (Input.GetKeyDown(KeyCode.N) && nombreEscena != "Morado") {
 
 
             tpmorado();
@@ -50,6 +50,6 @@ public class TPEscenas : MonoBehaviour
     }
     private void tpmorado()
     {
-        SceneManager.LoadScene("SampleScene");        
+        SceneManager.LoadScene("Morado");        
     }
 }
