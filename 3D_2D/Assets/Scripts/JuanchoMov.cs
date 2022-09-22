@@ -23,22 +23,22 @@ public class JuanchoMov : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-      
-     
+    { 
         Horizontal = Input.GetAxisRaw("Horizontal");
+        
         if (Horizontal < 0.0f) transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
         else if (Horizontal > 0.0f) transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
 
         Animator.SetBool("corriendo", Horizontal != 0.0f);
-        if (Physics2D.Raycast(transform.position, Vector3.down, 0.1f))
+      
+        if (Physics2D.Raycast(transform.position, Vector3.down, 0.2f))
         {
             Grounded = true;
         }
         else Grounded = false;
 
         // Salto
-        if (Input.GetKeyDown(KeyCode.W) && Grounded)
+        if (Input.GetKeyDown(KeyCode.W)&&Grounded)
         {
             Jump();
         }

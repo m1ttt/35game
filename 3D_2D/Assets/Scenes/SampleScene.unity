@@ -1150,7 +1150,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.56, y: -1.21, z: -10}
+  m_LocalPosition: {x: -2.5, y: -1.21, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1170,8 +1170,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jugador: {fileID: 1125609437}
-  minimo: {x: -20.56, y: -1.7}
-  maximo: {x: 8.81, y: -2.27}
+  minimo: {x: -6.753, y: -1.21}
+  maximo: {x: -2.5, y: -1.21}
   suavizado: 0
 --- !u!1 &1125609437
 GameObject:
@@ -1254,7 +1254,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1125609437}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.91, y: -0.85, z: 0}
+  m_LocalPosition: {x: -6.82, y: -1.606, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1311,7 +1311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 1
-  Jump_Force: 250
+  Jump_Force: 125
 --- !u!95 &1125609443
 Animator:
   serializedVersion: 4
