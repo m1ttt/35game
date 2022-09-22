@@ -4,29 +4,32 @@ using UnityEngine;
 
 public class MecanicaGravedad : MonoBehaviour
 {
-
-    enum DireccionGravedad { Arriba, Izquierd, Abajo, Derecha};
-    DireccionGravedad m_DireccionGravedad;
+    private Rigidbody2D rb;
+    private GameObject Juancho;
+    public bool flag = false;
     // Start is called before the first frame update
     void Start()
     {
-        m_DireccionGravedad = DireccionGravedad.Abajo;
+        rb = GetComponent<Rigidbody2D>();
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R)&&!flag)
         {
-            switch (m_DireccionGravedad){
-                case DireccionGravedad.Arriba:
-                    Physics2D.gravity = new Vector2(0, 9.8f);
-                    if (Input.GetKeyDown(KeyCode.Space))
-                    {
-
-                    }
-                    break;
-            }
+            StartCoroutine(temporizador());
         }
+    }
+
+    private IEnumerator temporizador()
+    {
+        rb.gravityScale *= -1;
+        transform.rotation *= Quaternion.Euler(0, 0, 180f);
+        flag = true;
+        yield return new WaitForSeconds(2);
+        flag = false;
+        
     }
 }

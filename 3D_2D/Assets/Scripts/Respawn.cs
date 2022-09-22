@@ -18,10 +18,7 @@ public class Respawn : MonoBehaviour
     {
         detectordeCaida.transform.position = new Vector2(transform.position.x, detectordeCaida.transform.position.y);
 
-
     }
-
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "DetectorDeCaida")
