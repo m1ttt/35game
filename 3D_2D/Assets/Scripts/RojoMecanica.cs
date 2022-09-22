@@ -11,8 +11,7 @@ public class RojoMecanica : MonoBehaviour
     private float Horizontal;
     private Animator Animator;
     private bool Grounded;
-    private bool Vertical;
-
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -25,16 +24,7 @@ public class RojoMecanica : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.A))
-        {
-            Horizontal = Input.GetAxisRaw("Horizontal");
-        }
-        else
-        {
-            
-        }
-        
-
+        Horizontal = 1;
 
         if (Horizontal < 0.0f) transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
         else if (Horizontal > 0.0f) transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
