@@ -50,10 +50,10 @@ public class JuanchoMov : MonoBehaviour
         // Salto
         if (Input.GetKeyDown(KeyCode.W)&&Grounded)
         {
-            Animator.SetBool("enSuelo", true);
+            Animator.SetBool("enSuelo", false);
             Jump();
         }
-        else if(Grounded==false)
+        else
         {
             Animator.SetBool("enSuelo", true);
         }

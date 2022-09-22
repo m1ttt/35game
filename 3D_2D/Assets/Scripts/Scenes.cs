@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Scenes : MonoBehaviour
 {
-   public int escena = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,22 +16,26 @@ public class Scenes : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.B) && escena != 3) ;
+        if (Input.GetKeyDown(KeyCode.B))
         {
-            escena = 3;
+  
             tprojo();
-            
+          
+
         }
-        else if (Input.GetKeyDown(KeyCode.N)) { 
-           
+        else if (Input.GetKeyDown(KeyCode.N)) {
             tpmorado();
-            
+          
+
+
         }
         else if(Input.GetKeyDown(KeyCode.M))
         {
+            
           
             tpazul();
             
+
         }
     }
     public void tprojo()
