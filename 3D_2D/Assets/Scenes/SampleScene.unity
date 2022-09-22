@@ -1152,6 +1152,7 @@ GameObject:
   - component: {fileID: 1125609438}
   - component: {fileID: 1125609440}
   - component: {fileID: 1125609441}
+  - component: {fileID: 1125609442}
   m_Layer: 0
   m_Name: player-idle-1
   m_TagString: Untagged
@@ -1219,7 +1220,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1125609437}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.65, y: 3.31, z: 0}
+  m_LocalPosition: {x: -11.69, y: 3.12, z: 0}
   m_LocalScale: {x: 8.260466, y: 7.859704, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1246,7 +1247,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &1125609441
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1263,6 +1264,18 @@ CapsuleCollider2D:
   m_Offset: {x: -0.010281727, y: -0.06397592}
   m_Size: {x: 0.17508785, y: 0.18949868}
   m_Direction: 0
+--- !u!114 &1125609442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125609437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ecaa481327d545c1a0f4dab5904d912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1604117034
 GameObject:
   m_ObjectHideFlags: 0
