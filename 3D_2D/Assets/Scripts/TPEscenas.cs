@@ -3,38 +3,50 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Scenes : MonoBehaviour
+public class TPEscenas : MonoBehaviour
 {
-
+    public int escena = 0;
     // Start is called before the first frame update
     void Start()
     {
-        
+        S
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.B))
+        if (Input.GetKeyDown(KeyCode.B)&&SceneManager.GetActiveScene!="Lol")
         {
-  
-            tprojo();
+            if (escena != 3)
+            {
+                tprojo();
+                escena = 3;
+            }
+            
           
 
         }
         else if (Input.GetKeyDown(KeyCode.N)) {
-            tpmorado();
-          
+            if (escena != 2)
+            {
+                tpmorado();
+                escena = 2;
+            }
+
 
 
         }
         else if(Input.GetKeyDown(KeyCode.M))
         {
-            
-          
-            tpazul();
-            
+
+
+            if (escena != 1)
+            {
+                tpazul();
+                escena = 1;
+            }
+
 
         }
     }
