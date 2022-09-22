@@ -9,6 +9,7 @@ public class JuanchoMov : MonoBehaviour
     
     private Rigidbody2D Rigidbody2D;
     private float Horizontal;
+    private Animator Animator;
     private bool Grounded;
 
     // Start is called before the first frame update
@@ -16,6 +17,7 @@ public class JuanchoMov : MonoBehaviour
     {
 
         Rigidbody2D = GetComponent<Rigidbody2D>();
+        Animator = GetComponent<Animator>();
         
     }
 
@@ -23,6 +25,7 @@ public class JuanchoMov : MonoBehaviour
     void Update()
     {
        Horizontal = Input.GetAxisRaw("Horizontal");
+        Animator.SetBool("corriendo", Horizontal != 0.0f);
         if (Input.GetKeyDown(KeyCode.W))
         {
             Jump();
