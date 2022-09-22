@@ -201,7 +201,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 429120391}
   m_LocalRotation: {x: -0.0000000013969839, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.59, y: -1.87, z: -10}
+  m_LocalPosition: {x: -4.899, y: -2.165, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -221,8 +221,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jugador: {fileID: 1078684208}
-  minimo: {x: -4.36, y: -1.87}
-  maximo: {x: -3.29, y: -1.87}
+  minimo: {x: -4.899, y: -2.165}
+  maximo: {x: -3.29, y: -2.165}
   suavizado: 0
 --- !u!1 &455612694
 GameObject:
@@ -704,6 +704,7 @@ GameObject:
   - component: {fileID: 1078684209}
   - component: {fileID: 1078684215}
   - component: {fileID: 1078684216}
+  - component: {fileID: 1078684217}
   m_Layer: 0
   m_Name: Juancho
   m_TagString: Untagged
@@ -842,7 +843,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1078684208}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.48, y: -1.99, z: 0}
+  m_LocalPosition: {x: -5.811, y: -2.406, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -875,6 +876,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9289d221e3fdc347873ef3a007fc171, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1078684217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078684208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2477566521e834ee4a4b95a65f0afff3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectordeCaida: {fileID: 0}
 --- !u!1 &1872372298
 GameObject:
   m_ObjectHideFlags: 0
@@ -919,4 +933,62 @@ Transform:
   - {fileID: 455612695}
   m_Father: {fileID: 0}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2063526289
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2063526291}
+  - component: {fileID: 2063526290}
+  m_Layer: 0
+  m_Name: DetectorDeCaidas
+  m_TagString: DetectorDeCaida
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &2063526290
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063526289}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 2.4130847, y: -0.29561782}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 7.0346847, y: 0.5460963}
+  m_EdgeRadius: 0
+--- !u!4 &2063526291
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063526289}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.863, y: -2.853, z: -9.903804}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
