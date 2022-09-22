@@ -5,62 +5,50 @@ using UnityEngine.SceneManagement;
 
 public class TPEscenas : MonoBehaviour
 {
-    public int escena = 0;
+    Scene m_escena;
+    string nombreEscena;
     // Start is called before the first frame update
     void Start()
     {
-        S
-    }
+        m_escena = SceneManager.GetActiveScene();
+        nombreEscena = m_escena.name;
+
+            }
 
     // Update is called once per frame
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.B)&&SceneManager.GetActiveScene!="Lol")
+        if (Input.GetKeyDown(KeyCode.B)&&nombreEscena!="Roja")
         {
-            if (escena != 3)
-            {
-                tprojo();
-                escena = 3;
-            }
-            
-          
+            tprojo(); 
 
         }
-        else if (Input.GetKeyDown(KeyCode.N)) {
-            if (escena != 2)
-            {
-                tpmorado();
-                escena = 2;
-            }
+        else if (Input.GetKeyDown(KeyCode.N) && nombreEscena != "SampleScene") {
 
 
+            tpmorado();
 
         }
-        else if(Input.GetKeyDown(KeyCode.M))
+        else if(Input.GetKeyDown(KeyCode.M) && nombreEscena != "Azul")
         {
 
-
-            if (escena != 1)
-            {
-                tpazul();
-                escena = 1;
-            }
+            tpazul();
 
 
         }
     }
-    public void tprojo()
+    private void tprojo()
     {
         SceneManager.LoadScene("Roja"); 
         
 
     }
-    public void tpazul()
+    private void tpazul()
     {
             SceneManager.LoadScene("Azul");
     }
-    public void tpmorado()
+    private void tpmorado()
     {
         SceneManager.LoadScene("SampleScene");        
     }
