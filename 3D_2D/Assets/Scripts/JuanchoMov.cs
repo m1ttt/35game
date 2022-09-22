@@ -34,19 +34,9 @@ public class JuanchoMov : MonoBehaviour
 
         
         Animator.SetBool("corriendo", Horizontal != 0.0f);
-     
 
-        if (Physics2D.Raycast(transform.position, Vector3.down, 0.2f))
-        {
-            Grounded = true;
-            Animator.SetBool("enSuelo", true);
 
-        }
-        else
-        {
-            Grounded = false;
-            Animator.SetBool("enSuelo", false);
-        }
+        Raycaster();
 
 
         // Salto
@@ -66,5 +56,20 @@ public class JuanchoMov : MonoBehaviour
     private void FixedUpdate()
     {
         Rigidbody2D.velocity = new Vector2(Horizontal*Speed, Rigidbody2D.velocity.y);
+    }
+
+    public void Raycaster()
+    {
+        if (Physics2D.Raycast(transform.position, Vector3.down, 0.2f))
+        {
+            Grounded = true;
+            Animator.SetBool("enSuelo", true);
+
+        }
+        else
+        {
+            Grounded = false;
+            Animator.SetBool("enSuelo", false);
+        }
     }
 }
