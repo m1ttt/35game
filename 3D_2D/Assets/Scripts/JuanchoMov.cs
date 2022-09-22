@@ -38,25 +38,23 @@ public class JuanchoMov : MonoBehaviour
         if (Physics2D.Raycast(transform.position, Vector3.down, 0.2f))
         {
             Grounded = true;
+            Animator.SetBool("enSuelo", true);
 
         }
         else
         {
             Grounded = false;
-
+            Animator.SetBool("enSuelo", false);
         }
 
 
         // Salto
         if (Input.GetKeyDown(KeyCode.W)&&Grounded)
         {
-            Animator.SetBool("enSuelo", false);
+            
             Jump();
         }
-        else
-        {
-            Animator.SetBool("enSuelo", true);
-        }
+
     }
     private void Jump()
     {
