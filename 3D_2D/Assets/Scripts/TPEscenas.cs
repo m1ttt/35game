@@ -28,36 +28,39 @@ public class TPEscenas : MonoBehaviour
         {
 
             tprojo();
-            Instantiate(Rapido);
+            
 
         }
         else if (Input.GetKeyDown(KeyCode.N) && nombreEscena != "Morado") {
 
 
             tpmorado();
-            Instantiate(Morado);
+            
 
         }
         else if(Input.GetKeyDown(KeyCode.M) && nombreEscena != "Azul")
         {
 
             tpazul();
-            Instantiate(Lento);
+            
 
         }
     }
-    private void tprojo()
+    public void tprojo()
     {
-        SceneManager.LoadScene("Roja"); 
-        
+        SceneManager.LoadScene("Roja");
+        Instantiate(Rapido);
 
     }
-    private void tpazul()
+    public void tpazul()
     {
             SceneManager.LoadScene("Azul");
+        Instantiate(Lento);
     }
-    private void tpmorado()
+    public void tpmorado()
     {
         SceneManager.LoadScene("Morado");
+        Instantiate(Morado);
+
     }
 }

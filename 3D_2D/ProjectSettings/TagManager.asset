@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - DetectorDeCaida
+  - Wall
+  - Gemas
   layers:
   - Default
   - TransparentFX
