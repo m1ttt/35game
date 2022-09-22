@@ -7,6 +7,11 @@ public class TPEscenas : MonoBehaviour
 {
     Scene m_escena;
     string nombreEscena;
+    public GameObject Rapido;
+    public GameObject Morado;
+    public GameObject Lento;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,20 +26,23 @@ public class TPEscenas : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.B)&&nombreEscena!="Roja")
         {
-            tprojo(); 
+
+            tprojo();
+            Instantiate(Rapido);
 
         }
         else if (Input.GetKeyDown(KeyCode.N) && nombreEscena != "Morado") {
 
 
             tpmorado();
+            Instantiate(Morado);
 
         }
         else if(Input.GetKeyDown(KeyCode.M) && nombreEscena != "Azul")
         {
 
             tpazul();
-
+            Instantiate(Lento);
 
         }
     }
