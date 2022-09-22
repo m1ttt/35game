@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class JuanchoMov : MonoBehaviour
 {
-
+    public float Speed;
+    public float Jump_Force;
+    
     private Rigidbody2D Rigidbody2D;
     private float Horizontal;
+    private bool Grounded;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +23,15 @@ public class JuanchoMov : MonoBehaviour
     void Update()
     {
        Horizontal = Input.GetAxisRaw("Horizontal");
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            Jump();
+        }
 
+    }
+    private void Jump()
+    {
+        Rigidbody2D.AddForce(Vector2.up*Jump_Force);
     }
 
     private void FixedUpdate()
