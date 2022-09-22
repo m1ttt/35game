@@ -8,30 +8,28 @@ public class Diamantes : MonoBehaviour
     private TPEscenas tele;
     string nombreEscena;
     Scene m_escena;
-    // Start is called before the first frame update
-    void Start()
+
+   void Start()
     {
-        tele = GetComponent<TPEscenas>();
         m_escena = SceneManager.GetActiveScene();
         nombreEscena = m_escena.name;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Gemas")
+        if(collision.gameObject.tag == "Player")
         {
             switch (nombreEscena)
             {
                 case "Azul":
-                    tele.tpazul();
-                    break;
-                case "Morado":
-                    tele.tpmorado();
+                    SceneManager.LoadScene("Roja");
                     break;
                 case "Roja":
-                    tele.tprojo();
+                    SceneManager.LoadScene("Morado");
                     break;
+
             }
+            
         }
     }
 }

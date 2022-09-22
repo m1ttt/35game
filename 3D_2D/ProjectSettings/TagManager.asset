@@ -7,6 +7,7 @@ TagManager:
   - DetectorDeCaida
   - Wall
   - Gemas
+  - TP
   layers:
   - Default
   - TransparentFX
